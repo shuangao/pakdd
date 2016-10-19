@@ -1,0 +1,14 @@
+%\begin{lemma}[Converge lemma]
+%Let $f(\mu)$ be a 1-strongly convex function. Let $\mu_1,...,\mu_t$ be a sequence corresponding to $\mu_t=(\sqrt{\lambda_1}\gamma^t,\sqrt{\lambda_2}\beta^t)$. Let $\Delta_t$ be the sub-gradient for $f(\mu_t)$ and $\mu^*=(\sqrt{\lambda_1}\gamma^*,\sqrt{\lambda_2}\beta^*)$
+%\end{lemma}
+
+Let $\mu_1,...,\mu_t$ be a sequence corresponding to $\mu_t=(\sqrt{\lambda_1}\gamma^t,\sqrt{\lambda_2}\beta^t)$. Problem \eqref{eq:loss} can be rewritten as:
+\begin{equation*}
+J(\mu)=\frac{1}{2}{\left\| \mu  \right\|^2} + \sum\limits_{i = 1}^l {{\xi _i}\left( \mu  \right)} 
+\end{equation*}
+Let $\Delta_t$ be the sub-gradient for $J(\mu_t)$ and  $\mu^*=(\sqrt{\lambda_1}\gamma^*, \sqrt{\lambda_2}\beta^*)$ be the optimal solution for it. Assume that $\left\| {{\Delta _t}} \right\| \le G$. According to Lemma 1 in \cite{shalev2011pegasos}, we have:
+\begin{equation}
+J({\mu_t}) - J(\mu^*) \le \frac{{{G^2}}}{{2t}}\left( {1 + \ln \left( t \right)} \right)
+\end{equation}
+This means that SMITLe converges at the rate of $O(\frac{\log(t)}{t})$.
+

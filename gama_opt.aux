@@ -1,0 +1,153 @@
+\relax 
+\citation{tommasi2014learning}
+\citation{Thrun96islearning}
+\citation{tommasi2014learning}
+\citation{kuzborskij2013n}
+\citation{jie2011multiclass}
+\citation{kuzborskij2013stability}
+\citation{kuzborskij2013n}
+\citation{Lu201514}
+\citation{tommasi2014learning}
+\citation{kuzborskij2013n}
+\citation{yang2007cross}
+\citation{aytar2011tabula}
+\citation{kuzborskij2013stability}
+\citation{yang2007cross}
+\citation{tommasi2014learning}
+\citation{cawley2006leave}
+\citation{kuzborskij2013stability}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Positive transfer VS Negative transfer. Relying on unrelated prior knowledge too much could lead to negative transfer.\relax }}{2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:neg}{{1}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Negative transfer happens when we transfer prior knowledge $f'$ to target one. Points with different color represent different categories. The data distribution would change even for identical categories in different task. The new added category (red points) can also greatly affect the data distribution in target task. \relax }}{2}}
+\newlabel{fig:distribution}{{2}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Problem Statement}{2}}
+\newlabel{sec:prob}{{II}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Mathematical Setting and Definition}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces useful notations in this paper\relax }}{2}}
+\newlabel{tab:notation}{{I}{2}}
+\citation{yang2007cross}
+\citation{tommasi2014learning}
+\newlabel{eq:linear}{{1}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Biased regularization}{3}}
+\newlabel{eq:asvm}{{2}{3}}
+\newlabel{eq:multi}{{3}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The final decision function value of a binary SVM can be get by combining the prior and empirical knowledge.\relax }}{3}}
+\newlabel{eq:opt}{{5}{3}}
+\newlabel{eq:solu}{{6}{3}}
+\newlabel{eq:solution}{{8}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}SMITLe}{3}}
+\newlabel{sec:smitle}{{III}{3}}
+\citation{kuzborskij2013stability}
+\citation{cawley2006leave}
+\citation{crammer2002algorithmic}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Multi-class Prediction Loss with LOO}{4}}
+\newlabel{eq:train_loss}{{10}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Loss Function of SMITLe}{4}}
+\newlabel{eq:loss}{{11}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Optimizing $\boldsymbol  {\gamma }$ and $\boldsymbol  {\beta }$}{4}}
+\newlabel{eq:dual}{{12}{4}}
+\citation{BoydCO}
+\citation{lampert2009learning}
+\citation{griffin2007caltech}
+\citation{jie2011multiclass}
+\citation{tommasi2014learning}
+\citation{kuzborskij2013n}
+\citation{kuzborskij2013n}
+\citation{tommasi2014learning}
+\citation{gehler2009feature}
+\newlabel{alg:1}{{\caption@xref {alg:1}{ on input line 1}}{5}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces SMITLe optimization\relax }}{5}}
+\newlabel{alg:1}{{1}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experiment}{5}}
+\newlabel{sec:exp}{{IV}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Dataset}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Baselines and algorithmic setup}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Positive transfer: transferring from related sources}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Average accuracy in percentage across all categories from Caltech to Caltech with different size of training set in target problem. 30 examples are randomly chosen from each class to train the source classifier and 30 examples from each class are chosen for test. \relax }}{6}}
+\newlabel{tab:C2C}{{II}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Negative transfer: transferring from unrelated sources}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Average accuracy in percentage across all categories from AwA to AwA with different size of training set in target problem. 50 examples are randomly chosen from each class to train the source classifier and 200 examples from each class are chosen for test.\relax }}{6}}
+\newlabel{tab:A2A}{{III}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Average accuracy in percentage across all categories from AwA to Caltech. Examples in AwA are used to train prior models. Different number of training size is randomly selected from Caltech dataset.\relax }}{6}}
+\newlabel{tab:A2C}{{IV}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-E}}Transferring from mixed sources}{6}}
+\newlabel{fig:awa-a}{{4a}{7}}
+\newlabel{sub@fig:awa-a}{{(a)}{a}}
+\newlabel{fig:awa-b}{{4b}{7}}
+\newlabel{sub@fig:awa-b}{{(b)}{b}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Experiment results for 10 classes, AwA. Horse is used as the new category. From \subref {fig:awa-b} we can see that SMITLe tends to more aggressively exploit the related prior knowledge.\relax }}{7}}
+\newlabel{fig:awa}{{4}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Overall accuracy comparision with different baselines. }}}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Comparision with MULTIpLE.}}}{7}}
+\newlabel{fig:a2c-a}{{5a}{7}}
+\newlabel{sub@fig:a2c-a}{{(a)}{a}}
+\newlabel{fig:a2c-b}{{5b}{7}}
+\newlabel{sub@fig:a2c-b}{{(b)}{b}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Experiment results for 10 classes, AwA. Horse is used as the new category.\relax }}{7}}
+\newlabel{fig:a2c}{{5}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Overall accuracy in percentage comparision with different baselines. }}}{7}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Comparision with MULTIpLE.}}}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{7}}
+\citation{shalev2011pegasos}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces A2A bad, 3 classes \relax }}{8}}
+\newlabel{fig:a2a_bad_3}{{6}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A2A bad, 4 classes \relax }}{8}}
+\newlabel{fig:a2a_bad_4}{{7}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(e)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(f)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(g)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(h)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(i)}{\ignorespaces {}}}{8}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(j)}{\ignorespaces {}}}{8}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  {}A: Convergence Analysis}{8}}
+\newlabel{appd:convg}{{A}{8}}
+\@writefile{toc}{\contentsline {section}{Appendix\nobreakspace  {}B: Proof of avoiding negative transfer}{8}}
+\newlabel{appd:proof}{{B}{8}}
+\newlabel{th:1}{{1}{8}}
+\bibstyle{IEEEtran}
+\bibdata{research}
+\bibcite{tommasi2014learning}{1}
+\bibcite{fei2006one}{2}
+\bibcite{kuzborskij2013n}{3}
+\bibcite{jie2011multiclass}{4}
+\bibcite{Thrun96islearning}{5}
+\bibcite{Lu201514}{6}
+\bibcite{yang2007cross}{7}
+\bibcite{aytar2011tabula}{8}
+\bibcite{suykens1999least}{9}
+\bibcite{kuzborskij2013stability}{10}
+\bibcite{cawley2006leave}{11}
+\bibcite{pan2010survey}{12}
+\bibcite{lim2012transfer}{13}
+\bibcite{LongICML15}{14}
+\bibcite{davis2009deep}{15}
+\newlabel{eq:loss_simple}{{14}{9}}
+\newlabel{eq:opt_gama}{{15}{9}}
+\newlabel{eq:opt_beta}{{16}{9}}
+\newlabel{eq:link1}{{17}{9}}
+\@writefile{toc}{\contentsline {section}{References}{9}}
+\bibcite{wang2014active}{16}
+\bibcite{zhou2014multi}{17}
+\bibcite{tommasi2010safety}{18}
+\bibcite{crammer2002algorithmic}{19}
+\bibcite{BoydCO}{20}
+\bibcite{shalev2011pegasos}{21}
+\bibcite{lampert2009learning}{22}
+\bibcite{griffin2007caltech}{23}
+\bibcite{gehler2009feature}{24}

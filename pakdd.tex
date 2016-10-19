@@ -1,0 +1,74 @@
+% This is LLNCS.DOC the documentation file of
+% the LaTeX2e class from Springer-Verlag
+% for Lecture Notes in Computer Science, version 2.4
+\documentclass{llncs}
+
+\usepackage{llncsdoc}
+\let \proof \relax
+\let\endproof\relax
+\usepackage{amsthm,amsmath}
+\usepackage{graphicx}
+
+\usepackage{booktabs}
+%\usepackage{subfig}
+\usepackage{subfigure}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{color,soul}
+\usepackage{epstopdf}
+%\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\algorithmicbreak}{\textbf{break}}
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{corollary}{Corollary}
+%\newtheorem{lemma}{Lemma}
+%
+\begin{document}
+
+\title{Safe Multiclass Transfer Learning}
+\maketitle
+\begin{abstract}
+	In transfer learning, domain adaptation tries to exploit the knowledge from a source domain with plentiful data to help learn a classifier for the target domain with a different distribution and little labeled training data. 
+	In this paper, we investigate this problem under the setting of \textit{Hypothesis Transfer Learning} (HTL) where we can only access the source model instead of the data. We aim at two important issues: effectiveness of the transfer and compatibility of the target model with different types of source models in the HTL scenario and proposed our method, SMTLe.
+	We illustrate that the feature augmentation strategy used in SMTLe can greatly increase the compatibility of the target model to fit different types of source models. To better exploit the source model, we use the bi-level optimization (BO) method to estimate the transfer parameter which measures the similarity of the source and target domains. We demonstrate that our BO problem is a strongly convex optimization problem and we can effectively obtain the optimal transfer parameter with the sub-gradient descent method. Empirical results show that SMTLe can effectively exploit the knowledge from different types of source models and outperform other HTL baselines as well.  
+\end{abstract}
+
+%%
+\section{Introduction}
+\input{gama_intro.tex}
+
+\section{Related Work}\label{sec:work}
+\input{gama_works.tex}
+
+\section{Using the Source Knowlege as the Auxiliary Bias}\label{sec:prob}
+\input{statement2.tex}
+
+\section{Bi-level Optimization for Transfer Parameter Estimation}\label{sec:smitle}
+
+\input{BO.tex}
+%\input{smitle.tex}
+
+\section{Experiment}\label{sec:exp}
+\input{gama_exp.tex}
+
+\section{Conclusion}
+\input{gama_con.tex}
+
+
+%\appendices
+\section*{Appendix}
+\input{appd}
+
+
+\bibliographystyle{splncs03}
+\bibliography{research}
+
+
+%\bibauthoryear
+
+\end{document}

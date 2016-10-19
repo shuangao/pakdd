@@ -1,0 +1,108 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{aytar2011tabula}
+Aytar, Y., Zisserman, A.: Tabula rasa: Model transfer for object category
+  detection. In: Computer Vision (ICCV), 2011 IEEE International Conference on.
+  pp. 2252--2259. IEEE (2011)
+
+\bibitem{ben2010theory}
+Ben-David, S., Blitzer, J., Crammer, K., Kulesza, A., Pereira, F., Vaughan,
+  J.W.: A theory of learning from different domains. Machine learning  79(1-2),
+   151--175 (2010)
+
+\bibitem{ben2007analysis}
+Ben-David, S., Blitzer, J., Crammer, K., Pereira, F., et~al.: Analysis of
+  representations for domain adaptation. Advances in neural information
+  processing systems  19,  137 (2007)
+
+\bibitem{cawley2006leave}
+Cawley, G.C.: Leave-one-out cross-validation based model selection criteria for
+  weighted ls-svms. In: Neural Networks, 2006. IJCNN'06. International Joint
+  Conference on. pp. 1661--1668. IEEE (2006)
+
+\bibitem{crammer2002algorithmic}
+Crammer, K., Singer, Y.: On the algorithmic implementation of multiclass
+  kernel-based vector machines. The Journal of Machine Learning Research  2,
+  265--292 (2002)
+
+\bibitem{davis2009deep}
+Davis, J., Domingos, P.: Deep transfer via second-order markov logic. In:
+  Proceedings of the 26th annual international conference on machine learning.
+  pp. 217--224. ACM (2009)
+
+\bibitem{jie2011multiclass}
+Jie, L., Tommasi, T., Caputo, B.: Multiclass transfer learning from
+  unconstrained priors. In: Computer Vision (ICCV), 2011 IEEE International
+  Conference on. pp. 1863--1870. IEEE (2011)
+
+\bibitem{krizhevsky2012imagenet}
+Krizhevsky, A., Sutskever, I., Hinton, G.E.: Imagenet classification with deep
+  convolutional neural networks. In: Advances in neural information processing
+  systems. pp. 1097--1105 (2012)
+
+\bibitem{kuzborskij2013stability}
+Kuzborskij, I., Orabona, F.: Stability and hypothesis transfer learning. In:
+  Proceedings of the 30th International Conference on Machine Learning. pp.
+  942--950 (2013)
+
+\bibitem{kuzborskij2013n}
+Kuzborskij, I., Orabona, F., Caputo, B.: From n to n+ 1: Multiclass transfer
+  incremental learning. In: Computer Vision and Pattern Recognition (CVPR),
+  2013 IEEE Conference on. pp. 3358--3365. IEEE (2013)
+
+\bibitem{lim2012transfer}
+Lim, J.J.: Transfer learning by borrowing examples for multiclass object
+  detection. Ph.D. thesis, Massachusetts Institute of Technology (2012)
+
+\bibitem{LongICML15}
+Long, M., Cao, Y., Wang, J., Jordan, M.: Learning transferable features with
+  deep adaptation networks. In: Proceedings of the 32nd International
+  Conference on Machine Learning, {ICML} 2015, Lille, France. pp. 97--105
+  (2015)
+
+\bibitem{maclaurin2015gradient}
+Maclaurin, D., Duvenaud, D., Adams, R.P.: Gradient-based hyperparameter
+  optimization through reversible learning. In: Proceedings of the 32nd
+  International Conference on Machine Learning (2015)
+
+\bibitem{pan2010survey}
+Pan, S.J., Yang, Q.: A survey on transfer learning. IEEE Transactions on
+  Knowledge and Data Engineering  22(10),  1345--1359 (2010)
+
+\bibitem{Pedregosa16}
+Pedregosa, F.: Hyperparameter optimization with approximate gradient. In:
+  Proceedings of the 33nd International Conference on Machine Learning, {ICML}
+  2016, New York City, NY, USA, June 19-24, 2016. pp. 737--746 (2016)
+
+\bibitem{rockafellar2015convex}
+Rockafellar, R.T.: Convex analysis. Princeton university press (2015)
+
+\bibitem{tommasi2010safety}
+Tommasi, T., Orabona, F., Caputo, B.: Safety in numbers: Learning categories
+  from few examples with multi model knowledge transfer. In: The IEEE
+  Conference on Computer Vision and Pattern Recognition (CVPR). pp. 3081--3088.
+  IEEE (2010)
+
+\bibitem{tommasi2014learning}
+Tommasi, T., Orabona, F., Caputo, B.: Learning categories from few examples
+  with multi model knowledge transfer. Pattern Analysis and Machine
+  Intelligence, IEEE Transactions on  36(5),  928--941 (2014)
+
+\bibitem{wang2014active}
+Wang, X., Huang, T.K., Schneider, J.: Active transfer learning under model
+  shift. In: Proceedings of the 31st International Conference on Machine
+  Learning (ICML-14). pp. 1305--1313 (2014)
+
+\bibitem{yang2007cross}
+Yang, J., Yan, R., Hauptmann, A.G.: Cross-domain video concept detection using
+  adaptive svms. In: Proceedings of the 15th international conference on
+  Multimedia. pp. 188--197. ACM (2007)
+
+\bibitem{zhou2014multi}
+Zhou, T., Tao, D.: Multi-task copula by sparse graph regression. In:
+  Proceedings of the 20th ACM SIGKDD international conference on Knowledge
+  discovery and data mining. pp. 771--780. ACM (2014)
+
+\end{thebibliography}

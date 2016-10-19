@@ -1,0 +1,75 @@
+In this section, \hl{we focus on Phase II of our framework, estimating the transfer parameter. We introduce an algorithm, called SMTLe, that can effectively estimate unbiased transfer parameter from a small training set and alleviate negative transfer}. 
+
+\subsection{Leave-One-Out estimation of LS-SVM }
+In the previous section, we introduce a novel perspective for HTL by feature augmentation. We show that how to set the values of the transfer parameters can significantly affect the performance of the target model. To achieve better performance of the target model, we have to reduce the training error and limit the VC dimension of the target model to improve its performance and alleviate negative transfer. In this part, we introduce the Leave-One-Out cross-validation  (LOO-CV) error to estimate the training error of each target binary model.
+
+
+As we discussed above, we have to choose the proper transfer parameters $\boldsymbol{\beta}$ to minimize the empirical risk on the target training set to exploit the source knowledge.
+In this paper, we choose the Leave-One-Out (LOO) cross-validation error to estimate the empirical risk for the following reasons: (1) It is proven that LOO error has a low bias on small training data regime \cite{kuzborskij2013stability}. The Leave-One-Out error is an almost unbiased estimator of the generalization error \cite{elisseeff2003leave}. (2) For LS-SVM, we can obtain unbiased LOO-CV error in closed form which means we can estimate the values of the transfer parameters in a more efficient way.
+
+Let $K(X,X)$ be the kernel matrix and
+\begin{equation}\label{eq:linear}
+\psi=\left[ 
+{K(X,X) + \frac{1}{C}{\rm{I}}} \right]
+\end{equation}
+The unbiased LOO estimation for sample $x_i$ can be written as \cite{cawley2006leave}:
+\begin{equation} \label{eq:loo}
+{\hat Y_{in}} = {Y_{in}} - \frac{{{\alpha _{in}}}}{{\psi_{ii}^{ - 1}}}\quad {\text{for}}\quad n = 1,...,N
+\end{equation}
+Here $\psi^{-1}$ is the inverse of matrix $\psi$ and  $\psi_{ii}^{-1}$ is the $ith$ diagonal element of $\psi^{-1}$. 
+
+Let $F'(X)=\left[f'_1(X),...,f'_N(X)\right]$ be the output matrix of the source models and define $\begin{array}{c}\boldsymbol{\alpha'} \end{array}$ and $\begin{array}{c}\boldsymbol{\alpha}''\end{array}$ as follow:
+\begin{equation}
+\begin{array}{cc}
+\boldsymbol{\alpha'} =\psi^{-1} \times Y & \boldsymbol{\alpha''} =\psi^{-1} \times F'(X)
+\end{array}
+\end{equation}
+
+The matrix $\boldsymbol{\alpha}=\{\alpha_{in}|i=1,...l;n=1,...,N\}$ in Eq. \eqref{eq:loo} can be calculated as:
+\begin{equation}\label{eq:solution}
+ \boldsymbol{\alpha}  = \boldsymbol{\alpha} ' - \boldsymbol{\alpha} ''\boldsymbol{\beta ^T}
+\end{equation}
+
+Now, we already have an effective way to measure the performance of each target binary model with different $\boldsymbol{\beta}$ for our task. In the next subsection, we expand it to the multi-class scenario to estimate the optimal transfer parameters.
+
+\subsection{Loss Function of SMTLe}
+In this subsection, we propose a novel objective function according to our multi-class prediction loss function for transfer parameter estimation. We show that we can effectively obtain the optimal  $\boldsymbol{\beta}$ that alleviates negative transfer. 
+
+For the multi-class scenario, we use One-versus-all strategy to assign the label to class $j$ if $j \equiv \arg {\max _{n = 1,...,N}}\left\{{f_n}(x)\right\}$. Let us call $\xi_i$ the multi-class prediction error for example $x_i$. $\xi_i$ can be defined as \cite{crammer2002algorithmic}:
+\begin{equation}\label{eq:train_loss}
+\xi_i(\beta) = \mathop {\max }\limits_{n \in \left\lbrace 1,...,N \right\rbrace } {\left[ {1 - {\varepsilon _{n{y_i}}} + {{\hat Y}_{in}}\left( {\beta_n } \right) - {{\hat Y}_{i{y_i}}}\left( {\beta_{y_i} } \right)} \right]}
+\end{equation}
+Where $\varepsilon _{n{y_i}}=1$ if $n=y_i$ and 0 otherwise. The intuition behind this loss function is to enforce the distance between the true class and other classes to be at least 1. 
+ 
+From Eq. \eqref{eq:train_loss} we can see that, different from the binary scenario where 0 is used as the hard threshold to distinguish the two classes, our multi-class loss only depends on the gap between the decision function value of the correct label ($\hat Y_{y_i}$) and the maximum among the decision function value of the other labels ${{\hat Y}_{in}}(n \ne y_i)$. To reduce $\xi_i$ for a specific example $x_i$, we only have to increase the gap between ${{\hat Y}_{in}(n \ne y_i)}$ and ${{\hat Y}_{i{y_i}}}$. 
+
+Instead of optimizing $\xi_i$ directly, we add the extra regularization terms for $\boldsymbol{\beta}$. Then we define our objective function as:
+\begin{equation}\label{eq:loss}
+\begin{aligned}
+& \textbf{min}
+& & \frac{{{\lambda}}}{2}\sum\limits_{n = 1}^N {{{\left\| {{\beta _{n}}} \right\|}^2}}  + \sum\limits_{i = 1}^l {{\xi _i}}   \\
+& \textbf{s.t.}
+& & 1 - {\varepsilon _{n{y_i}}} + {\hat Y_{in}}\left( {\beta_n } \right) - {\hat Y_{i{y_i}}}\left( {\beta_{y_i} } \right) \le {\xi_i};\\
+& & &\lambda_1,\lambda_2 \ge 0
+\end{aligned}
+\end{equation}
+
+Here $\lambda$ is the regularization parameter. This objective function can improve the performance of the target model on the unseen test data from two aspects: improve the generalization ability by limiting the VC dimension and reduce the empirical risk compared to no transfer model.
+
+As we discussed in Section \ref{sec:prob}, regularizing the transfer parameters could improve the performance of the target model. Moreover, by adding the regularization term, the objective function \eqref{eq:loss} turns to be strongly convex. Therefore, we are able to use sub-gradient descent \cite{boyd2004convex} to guarantee its convergence to be $\mathcal{O}(\log(t)/t)$ optimal in $t$ iterations  (see proof in Appendix \ref{appd:convg}). This promises we can find the optimal transfer parameters effectively.
+We can also show that this objective function can achieve lower empirical risk compared to no transfer model (see Appendix \ref{appd:proof}). This is very important when the source and target domains are not very related.
+
+ 
+%\subsection{Optimizing the transfer parameter}
+By adding a dual set of variables in objective function \eqref{eq:loss}, one for each constraint in, we get the Lagrangian of the optimization problem:
+\begin{equation}\label{eq:dual}
+\begin{aligned}
+ &L\left( {\beta ,\xi ,\eta } \right) =
+ \frac{{{\lambda}}}{2}\sum\limits_{n = 1}^N {{{\left\| {{\beta _n}} \right\|}^2}}  + \sum\limits_{i = 1}^l {{\xi _i}} \\
+   &+ \sum\limits_{i,n} {{\eta _{i,n}}\left[ {1 - {\varepsilon _{n{y_i}}} + {{\hat Y}_{in}}\left( {\beta_n } \right) - {{\hat Y}_{i{y_i}}}\left( {\beta_{y_i} } \right) - {\xi _i}} \right]}  \\
+ &\textbf{s.t.} \quad  \forall i,n \quad {} {\eta _{i,n}} \ge 0
+\end{aligned}
+\end{equation}
+
+To obtain the optimal values for the problem above, we introduce our method using sub-gradient descent \cite{BoydCO} and summarize it in Algorithm. \ref{alg:1}. 
+\input{agl1.tex}
