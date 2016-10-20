@@ -3,11 +3,32 @@ In this section, we show empirical results of our algorithm for different transf
 Office contains 31 classes from 3 subsets (Amazon,Dslr and Webcam) and Caltech contains 256 classes. We select 13 shared classes from two datasets\footnote{13 classes include: backpack, bike, helmet, bottle, calculator, headphone, keyboard, laptop, monitor, mouse, mug, phone and projector}. The input features of all examples are extracted using AlextNet\cite{krizhevsky2012imagenet}.
 Because the two subsets Dslr and Webcam are relatively small and don't have data for testing, we don't use them as our target domain.
 
-We compare our algorithm SMTLe with two kinds of baselines. The first one is the methods without leveraging any prior knowledge (no transfer baselines). \textbf{No transfer:} SVMs trained only on target data. Any transfer algorithm that performs worse than it suffers from negative transfer. \textbf{Batch:} We combined the source and target data, assuming that we have full access to all data, to train the SVMs. The result of the Batch method might be considered as the best performance achieved during the transfer learning. The second kind of baseline consists of two previous transfer methods in HTL, \textbf{MKTL\cite{jie2011multiclass}} and \textbf{Multi-KT\cite{tommasi2014learning}}. Similar to SMTLe, both of them use the LOOCV method to estimate the relatedness of the source model and target domain, but they use their own convex objective function without the $\ell_2$ penalty terms. 
+We compare our algorithm SMTLe with two kinds of baselines. The first one is the methods without leveraging any prior knowledge (no transfer baselines). \textbf{No transfer:} SVMs trained only on target data. Any transfer algorithm that performs worse than it suffers from negative transfer. \textbf{Batch:} We combined the source and target data, assuming that we have full access to all data, to train the SVMs. The result of the Batch method might be considered as the best performance achieved during the transfer learning. The second kind of baseline consists of two previous transfer methods in HTL, \textbf{MKTL\cite{jie2011multiclass}} and \textbf{Multi-KT\cite{tommasi2014learning}}. Similar to SMTLe, both of them use the LOOCV method to estimate the relatedness of the source model and target domain, but they use their own convex objective function without the $\ell_2$ penalty terms. We use linear kernel for all methods in all our experiments.
 \subsection{Extensive experiments on benchmarks}
 In this subsection, we perform 6 groups of experiments under the setting of HTL. In each group of experiment, the source model is trained using linear SVMs on the whole source data. We use 5 different sizes of training data for each class in the target domain. Experiment results are reported by averaging over 10 rounds and shown in Figure \ref{fig:exp}. 
 
 \textbf{Observation \& discussion:} SMTLe can significantly outperform other baselines especially when the training size is small. Moreover, in some groups of experiments, they even suffer from negative transfer on the small training set. As we discussed above, without the $\ell_2$ penalty in the objective functions when the training set is small, these two HTL baselines are not able to estimate the relatedness between the source model and target domain well. However, as the training size increases, the variance of the estimation of LOOCV decreases. The affect of the $\ell_2$ penalty term become less significant. Meanwhile, the target data contains more useful information to learn a better target model. Therefore, SMTLe and the other two HTL baselines show similar performance. In some experiments, it is interesting to see that SMTLe can even outperform the Batch method which might be considered as the the best performance under the setting of HTL.
 \input{figs.tex}
+
+\subsection{Transfer from Multi-Model \& Multi-Source}
+As we mentioned, SMTLe can exploit knowledge from different types of models which could greatly extend our selection of the source domain. In this subsection we show that SMTLe can successfully transfer the knowledge from two source models using two different types of classifiers.
+\begin{table}[htbp]
+	\centering
+	\caption{A2C}
+	\begin{tabular}{cccccc}
+		\toprule
+		& 1     & 2     & 3     & 4     & 5 \\
+		\midrule
+		SMTLe & 71.60 & 78.10 & 81.80 & 83.60 & 84.10 \\
+		%SMITLe\_s & 71.50 & 78.10 & 81.30 & 83.20 & 83.80 \\
+		Multi-KT & 62.40 & 73.70 & 80.00 & 81.60 & 80.90 \\
+		MKTL  & 36.80 & 53.70 & 78.20 & 81.20 & 74.20 \\
+		No transfer & 59.90 & 72.70 & 78.00 & 80.80 & 82.20 \\
+		batch & 76.50 & 79.80 & 80.40 & 80.40 & 81.60 \\
+		\bottomrule
+	\end{tabular}%
+	%\label{tab:addlabel}%
+\end{table}%
+
 
 
