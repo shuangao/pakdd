@@ -32,6 +32,11 @@ Davis, J., Domingos, P.: Deep transfer via second-order markov logic. In:
   Proceedings of the 26th annual international conference on machine learning.
   pp. 217--224. ACM (2009)
 
+\bibitem{fei2006one}
+Fei-Fei, L., Fergus, R., Perona, P.: One-shot learning of object categories.
+  Pattern Analysis and Machine Intelligence, IEEE Transactions on  28(4),
+  594--611 (2006)
+
 \bibitem{jie2011multiclass}
 Jie, L., Tommasi, T., Caputo, B.: Multiclass transfer learning from
   unconstrained priors. In: Computer Vision (ICCV), 2011 IEEE International
@@ -52,16 +57,6 @@ Kuzborskij, I., Orabona, F., Caputo, B.: From n to n+ 1: Multiclass transfer
   incremental learning. In: Computer Vision and Pattern Recognition (CVPR),
   2013 IEEE Conference on. pp. 3358--3365. IEEE (2013)
 
-\bibitem{lim2012transfer}
-Lim, J.J.: Transfer learning by borrowing examples for multiclass object
-  detection. Ph.D. thesis, Massachusetts Institute of Technology (2012)
-
-\bibitem{LongICML15}
-Long, M., Cao, Y., Wang, J., Jordan, M.: Learning transferable features with
-  deep adaptation networks. In: Proceedings of the 32nd International
-  Conference on Machine Learning, {ICML} 2015, Lille, France. pp. 97--105
-  (2015)
-
 \bibitem{maclaurin2015gradient}
 Maclaurin, D., Duvenaud, D., Adams, R.P.: Gradient-based hyperparameter
   optimization through reversible learning. In: Proceedings of the 32nd
@@ -79,12 +74,6 @@ Pedregosa, F.: Hyperparameter optimization with approximate gradient. In:
 \bibitem{rockafellar2015convex}
 Rockafellar, R.T.: Convex analysis. Princeton university press (2015)
 
-\bibitem{tommasi2010safety}
-Tommasi, T., Orabona, F., Caputo, B.: Safety in numbers: Learning categories
-  from few examples with multi model knowledge transfer. In: The IEEE
-  Conference on Computer Vision and Pattern Recognition (CVPR). pp. 3081--3088.
-  IEEE (2010)
-
 \bibitem{tommasi2014learning}
 Tommasi, T., Orabona, F., Caputo, B.: Learning categories from few examples
   with multi model knowledge transfer. Pattern Analysis and Machine
@@ -95,14 +84,14 @@ Wang, X., Huang, T.K., Schneider, J.: Active transfer learning under model
   shift. In: Proceedings of the 31st International Conference on Machine
   Learning (ICML-14). pp. 1305--1313 (2014)
 
+\bibitem{yang2007adapting}
+Yang, J., Yan, R., Hauptmann, A.G.: Adapting svm classifiers to data with
+  shifted distributions. In: Data Mining Workshops, 2007. ICDM Workshops 2007.
+  Seventh IEEE International Conference on. pp. 69--76. IEEE (2007)
+
 \bibitem{yang2007cross}
 Yang, J., Yan, R., Hauptmann, A.G.: Cross-domain video concept detection using
   adaptive svms. In: Proceedings of the 15th international conference on
   Multimedia. pp. 188--197. ACM (2007)
-
-\bibitem{zhou2014multi}
-Zhou, T., Tao, D.: Multi-task copula by sparse graph regression. In:
-  Proceedings of the 20th ACM SIGKDD international conference on Knowledge
-  discovery and data mining. pp. 771--780. ACM (2014)
 
 \end{thebibliography}

@@ -1,19 +1,15 @@
 \begin{theorem}\label{th:1}
-Let $L(\beta)$ be a $\lambda$-strongly convex function and $\beta^*$ be its optimal solution.Let $\beta_1,...,\beta_{T+1}$ be a sequence such that $\beta_1 \in B$ and for $t>1$, we have $\beta_{t+1} = \beta_t - \eta_t \Delta_t$ , where $\Delta_t$ is the sub-gradient of $L(\beta_t)$ and $\eta_t = 1/(\lambda t)$. Assume we have $||\Delta_t|| \leq G$ for all $t$. Then we have:
-	
+Let $L(\beta)$ be a $\lambda$-strongly convex function and $\beta^*$ be its optimal solution.Let $\beta_1,...,\beta_{T+1}$ be a sequence such that $\beta_1 \in B$ and for $t>1$, we have $\beta_{t+1} = \beta_t - \eta_t \Delta_t$ , where $\Delta_t$ is the sub-gradient of $L(\beta_t)$ and $\eta_t = 1/(\lambda t)$. Assume we have $||\Delta_t|| \leq G$ for all $t$. Then we have:	
 	\begin{equation}
 	L(\beta_{T+1}) \leq L(\beta^*)+\frac{G^2(1+\ln (T))}{2\lambda T}
 	\end{equation}
 \end{theorem}
-
-\begin{proof}
-	As $L(\beta)$ is strongly convex and $\Delta_t$ is in its sub-gradient set at $\beta_t$, according to the definition of $\lambda$-strong convexity \cite{rockafellar2015convex}, the following inequality holds:
-	
+\textbf{Proof:}
+	As $L(\beta)$ is strongly convex and $\Delta_t$ is in its sub-gradient set at $\beta_t$, according to the definition of $\lambda$-strong convexity \cite{rockafellar2015convex}, the following inequality holds:	
 	\begin{equation}\label{eq:app:strong}
 		\left\langle {\beta_t - \beta^*,\Delta_t} \right\rangle \geq L(\beta_t)-L(\beta^*)+\frac{\lambda}{2}||\beta_t - \beta^*||^2
 	\end{equation} 
-	For the term $\left\langle {\beta_t - \beta^*,\Delta_y} \right\rangle$, it can be written as:
-	
+	For the term $\left\langle {\beta_t - \beta^*,\Delta_y} \right\rangle$, it can be written as:	
 	\begin{equation} \label{eq:app:inner}
 	\begin{aligned}
 	\left\langle {\beta_t - \beta^*,\Delta_t} \right\rangle &= \left\langle {\beta_t - \frac{1}{2}\eta_t\Delta_t + \frac{1}{2}\eta_t\Delta_t- \beta^*,\Delta_t} \right\rangle
@@ -21,17 +17,16 @@ Let $L(\beta)$ be a $\lambda$-strongly convex function and $\beta^*$ be its opti
 %	&= \frac{1}{2}\left\langle {\left( {{\beta _{t + 1}} - {\beta ^*}} \right) + \left( {{\beta _t} - {\beta ^*}} \right),{\Delta _t}} \right\rangle  + \frac{1}{2}{\eta _t}\Delta _t^2\\
 	=\frac{1}{2}\left\langle {{\beta _{t + 1}} + {\beta _t} - 2{\beta ^*},{\Delta _t}} \right\rangle  + \frac{1}{2}{\eta _t}\Delta _t^2
 	\end{aligned}
-	\end{equation}
-	
+	\end{equation}	
 	Then we have:
 	\begin{equation}\label{eq:app:squrediff}
 	\begin{aligned}
-	||\beta_t-\beta^*||^2-||\beta_{t+1}-\beta^*||^2 &= ( {{\beta _t} - {\beta _{t + 1}}})  ({{\beta _t} + {\beta _{t + 1}} - 2{\beta ^*}}) 
+	||\beta_t-\beta^*||^2-||\beta_{t+1}-\beta^*||^2 
+	%&= ( {{\beta _t} - {\beta _{t + 1}}})  ({{\beta _t} + {\beta _{t + 1}} - 2{\beta ^*}}) 
 	=\left\langle {{\beta _{t + 1}} + {\beta _t} - 2{\beta ^*},{\eta_t\Delta _t}} \right\rangle
 	\end{aligned}
 	\end{equation}
-	Using the assumption $||\Delta_t|| \leq G$, we can rearrange \eqref{eq:app:strong} and plug \eqref{eq:app:inner} and \eqref{eq:app:squrediff} into it, we have:
-	
+	Using the assumption $||\Delta_t|| \leq G$, we can rearrange \eqref{eq:app:strong} and plug \eqref{eq:app:inner} and \eqref{eq:app:squrediff} into it, we have:	
 	\begin{equation}\label{eq:app:it_diff}
 	\begin{aligned}
 	&{Diff}_t = L(\beta_t)-L(\beta^*)
@@ -39,10 +34,8 @@ Let $L(\beta)$ be a $\lambda$-strongly convex function and $\beta^*$ be its opti
 %	&\leq \frac{{||{\beta _t} - {\beta ^*}|{|^2} - ||{\beta _{t + 1}} - {\beta ^*}|{|^2}}}{{2{\eta _t}}} - \frac{\lambda }{2}||{\beta _t} - {\beta ^*}|{|^2} + \frac{1}{2}{\eta _t} G^2\\
 	\le\frac{\lambda (t-1)}{2}{||{\beta _t} - {\beta ^*}||^2}- \frac{\lambda t}{2}{||{\beta _{t+1}} - {\beta ^*}||^2}+\frac{1}{2}{\eta _t} G^2
 	\end{aligned}
-	\end{equation}
-	
-	Due to the strong convexity, for each pair of $L(\beta_t)$ and $L(\beta_{t+1})$ for $t=1,...,T$, according to \eqref{eq:app:strong}, we have:
-	
+	\end{equation}	
+	Due to the strong convexity, for each pair of $L(\beta_t)$ and $L(\beta_{t+1})$ for $t=1,...,T$, according to \eqref{eq:app:strong}, we have:	
 	\begin{equation}
 	\begin{aligned}
 	L({\beta _{t + 1}}) - L({\beta _t}) &\le \left\langle {{\beta _{t + 1}} - {\beta _t},{\Delta _t}} \right\rangle  - \frac{\lambda }{2}||{\beta _{t + 1}} - \beta_t |{|^2} =  - \eta_t\Delta _t^2 (1-\frac{1}{2t}) \leq 0
@@ -53,20 +46,16 @@ Let $L(\beta)$ be a $\lambda$-strongly convex function and $\beta^*$ be its opti
 	
 	\begin{equation} \label{eq:app:difsum}
 	\sum_{t=1}^{T} Diff_t =  \sum_{t=1}^{T}L(\beta_t)-TL(\beta^*) \geq T\left[L(\beta_T)-L(\beta^*)\right]
-	\end{equation}
-	
-	Next, we show that 
-	
+	\end{equation}	
+	Next, we show that 	
 	\begin{equation}
 	\begin{aligned}
 	&\sum_{t=1}^{T} Diff_t =
 	\sum_{t=1}^{T}\left\{\frac{\lambda (t-1)}{2}{||{\beta _t} - {\beta ^*}||^2}- \frac{\lambda t}{2}{||{\beta _{t+1}} - {\beta ^*}||^2}+\frac{1}{2}{\eta _t} G^2\right\} \\
 	&=-\frac{\lambda T}{2}{||{\beta _{T+1}-\beta^*}||^2} + \frac{G^2}{2 \lambda}\sum_{t=1}^{T} \frac{1}{t}\leq \frac{G^2}{2 \lambda}\sum_{t=1}^{T} \frac{1}{t} \leq \frac{G^2}{2 \lambda}(1+\ln(T))
 	\end{aligned}
-	\end{equation}
-	
+	\end{equation}	
 	Combining \eqref{eq:app:difsum} and rearranging the result, we have:
 	\begin{equation*}
 	L(\beta_{T+1}) \leq L(\beta^*)+\frac{G^2(1+\ln (T))}{2\lambda T}
 	\end{equation*}
-\end{proof}

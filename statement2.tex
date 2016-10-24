@@ -1,27 +1,29 @@
-In this section, we introduce our strategy in SMTLe that can exploit the knowledge from different types of classifiers. In general, for each example in the target domain, we use its output class probabilities from the source models as the auxiliary bias term to adjust the final output.
+In this section, we introduce our strategy in EMTLe that can exploit the knowledge from different types of source classifiers. In general, for each example in the target domain, we use its output class probabilities from the source models as the auxiliary bias term to adjust the final prediction of the target model.
 
-%\subsection{Auxiliary Bias from the source model}
-To make our method compatible with different types of source model, we have to find a solution to align the knowledge of different types of classifier. It is clear that most of the existing classifiers can output the class probability for the input examples. Therefore, in SMTLe, we use the class probability of the target examples from the source model to align the knowledge of the different types of source model.  
+Suppose we have to recognition a image from one of the $N$ visual classes and there are $N$ experts each of who can only provide the probability of this image for one certain class (binary source model). After we make our decision for one example (prediction from target model), the experts provide their own decisions as well (probabilities from the source models). Their decisions can provide extra information regarding this example as the auxiliary bias and adjust our final prediction.
+As each of the expert is a specialist in one class, we should weigh their decisions as well due to the bias of their predictions (see Figure \ref{fig:ab}). 
 
-To use the aligned source knowledge, we use a straight-forward way, by using the class probability as the auxiliary information to adjust the output of the target model (see Figure \ref{fig:ab}).
-However, as we know that due to the domain shift, the performances of the different source models vary on the target domain. Therefore, to compensate this domain shift, we apply different weights to different source model outputs. Here, the weight of each model reflects the relatedness between the source model and the target domain. The more related they are, the larger weight we should apply. Specifically, in this paper, we call it \textit{transfer parameter}. Therefore, for any target learning $D_T=\{x,y\}$ and the given source model $f'$, our goal is to find the target model $f$:
+Here, the weight of each source model reflects the relatedness between the source model and our target domain. The more related they are, the better decision the source model can make and the larger weight we should apply to it. Specifically, in this paper, we call the weight \textit{transfer parameter}. Therefore, for any target data $D=\{x,y\}$ and the given source models $f'=\{f'_1,...,f'_N\}$, our goal is to find the target model $f$:
 \begin{equation}\label{eq:low_opt}
-f=\underset{f \in \mathcal{F}}{\arg \min}\ell\left(f+\beta f',D_T\right)
+f=\underset{f \in \mathcal{F}}{\arg \min}\ell\left(f+\beta f',D\right)
 \end{equation} 
-where $\beta$ is the transfer parameter and $\ell(\cdot,\cdot)$ is the loss function to learn the target model.
+where $\beta=[\beta_1,...,\beta_N]$ is the transfer parameter and $\ell(\cdot,\cdot)$ is the loss function to learn the target model.
+It is obvious that assigning proper transfer parameter to the source model can significantly improve the performance of our final prediction.
+However, the transfer parameter in Eq.\eqref{eq:low_opt} is a hyperparameter and we cannot solve it directly. Therefore, we introduce our bi-level optimization method for transfer parameter estimation in the next section.
 
-\begin{figure}\label{fig:ab}
+
+\begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{fig/ab.png}
-	\caption{Demonstration of using the source class probability as the auxiliary bias to adjust the output of the target model.}
+	\includegraphics[scale=0.5]{fig/ab.png}
+	\caption{Demonstration of using the source class probability as the auxiliary bias to adjust the output of the target model. $f'$ is a group of binary classifiers $\{f'_1,...,f'_4\}$ for each class and for each source model $f'_n$, we use the weight $\beta_n$ to control the knowledge transferred from this model.}
+	\label{fig:ab}
 \end{figure}
-%Actually, using the output of the classification model as the auxiliary information to train another model has been widely used in different learning scenarios. In Vapnik's \textit{Teacher-student} diagram, it is represented as the \textit{privileged knowledge} and in Hinton's \textit{Distillation} diagram \cite{hinton2015distilling}, it is called \textit{soft-labels}.
-%Different from those previous works where the model used to general the auxiliary features is trained from the same domain, our model is trained from a different but related domain.
 
-There are several advantages of our feature augmentation with class probability: (1) It is an effective and easy way to align the knowledge from different types of source model.
-(2) Features are naturally normalized in the same dimension as the class probability is always in the interval $[0,1]$. (3) The bonus advantage: increase the selection of the source domain. As SMTLe can select more types of source model, we have more options to select our source domain. As long as the model has the knowledge of the class we want (even though we may only need knowledge of one class in a multi-class classifier), we can still exploit the knowledge.
+Unlike the previous work\cite{aytar2011tabula,tommasi2014learning,yang2007adapting} which has to use the specific parameter of the source model as the source knowledge, our strategy is more compatible with different types of classifiers. Compared to \cite{jie2011multiclass} which uses sophisticated feature augmentation method to leverage the source model prediction, we provide a more straight-forward way to use the knowledge and have fewer hyperparameters to estimate as well.
+In addition, there are two advantages of our strategy: (1) It is an effective and easy way to align the knowledge from different types of source classifiers.
+(2) The auxiliary bias term is naturally normalized in the same dimension as the class probabilities are always in the interval $[0,1]$.  As EMTLe can select more types of source classifiers, this makes it more practical in a real HTL scenario.
 
-From Eq. \eqref{eq:low_opt} we can see that, once we can determine the value of the transfer parameter $\beta$, we are able to find the target model $f_T$. In the next part, we will show how we can effective estimate the unbiased transfer parameter effectively.
+From Eq. \eqref{eq:low_opt} we can see that, once we have determined the value of the transfer parameter $\beta$, we are able to find the target model $f$ and solve the learning problem. In the next part, we will show how we can effective estimate the transfer parameter.
 
 
 

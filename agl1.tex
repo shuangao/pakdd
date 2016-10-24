@@ -3,10 +3,10 @@
         \begin{algorithmic}[1]
             \REQUIRE $\lambda, \psi,Y,f',T$,
             \ENSURE $\beta=\left\{\beta^1,...,\beta^n\right\}$
-            \STATE $\beta^0 \leftarrow 1$
-            \STATE $\alpha' = \psi^{-1}Y,\alpha'' = \psi^{-1}f'$
+            \STATE $\beta^0 = 1$
+            ,$\alpha' = \psi^{-1}Y,\alpha'' = \psi^{-1}f'$
             \FOR {$t=1$ to $T$}
-                \STATE $\hat Y \leftarrow Y - {\left( {\psi^{-1} \circ I} \right)^{ - 1}}\left( \alpha' - \alpha''\beta \right)$,${\Delta _\beta }=0$ 
+                \STATE $\hat Y \leftarrow Y - {\left( {\psi^{-1} \circ I} \right)^{ - 1}}\left( \alpha' - \alpha''\beta \right)$,\qquad${\Delta _\beta }=0$ 
                 \FOR {$i=1$ to $l$}
                 	\STATE ${\Delta _\beta }\leftarrow {\Delta _\beta }+\lambda\beta$ 
                 	%\FOR {$r=1$ to $N$}
