@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.20)  24 OCT 2016 10:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.20)  26 OCT 2016 10:35
 entering extended mode
 **pakdd.tex
 (pakdd.tex
@@ -522,7 +522,11 @@ File: fig/multi_caltech.png Graphic file (type png)
 <use fig/multi_caltech.png>
 Package pdftex.def Info: fig/multi_caltech.png used on input line 54.
 (pdftex.def)             Requested size: 138.84729pt x 104.13046pt.
-) (gama_con.tex [9]) (appd.tex (converge.tex
+) (gama_con.tex
+Underfull \vbox (badness 2181) has occurred while \output is active []
+
+ [9])
+(appd.tex (converge.tex
 Overfull \hbox (33.64615pt too wide) detected at line 20
 [] []
  []
@@ -536,11 +540,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3739 strings out of 493673
  49584 string characters out of 3141520
- 227804 words of memory out of 3000000
+ 226804 words of memory out of 3000000
  6956 multiletter control sequences out of 15000+200000
  11648 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,12n,24p,1049b,571s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,12n,24p,1048b,571s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
 :/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/P
@@ -565,7 +569,7 @@ lic/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmti9.pfb>
-Output written on pakdd.pdf (12 pages, 992416 bytes).
+Output written on pakdd.pdf (12 pages, 992356 bytes).
 PDF statistics:
  168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
