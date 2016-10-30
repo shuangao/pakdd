@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  22 OCT 2016 11:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  27 OCT 2016 16:59
 entering extended mode
 **./converge.tex
 (converge.tex
@@ -775,12 +775,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -810,123 +804,6 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-! Undefined control sequence.
-l.38 ...+1})$ for $t=1,...,T$, according to \eqref
-                                                  {eq:app:strong}, we have:
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no e in font nullfont!
-Missing character: There is no q in font nullfont!
-Missing character: There is no : in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no : in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no : in font nullfont!
-
-Overfull \hbox (23.76047pt too wide) in paragraph at lines 37--39
-         $\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/1
-0 )$
- []
-
-
-Overfull \hbox (33.88551pt too wide) in paragraph at lines 37--39
-\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )$
- []
-
-
-Overfull \hbox (14.16663pt too wide) in paragraph at lines 37--39
-\OML/cmm/m/it/10 t \OT1/cmr/m/n/10 =
- []
-
-
-Overfull \hbox (29.45485pt too wide) in paragraph at lines 37--39
-\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; :::; T$
- []
-
-
-! LaTeX Error: Environment aligned undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 	\begin{aligned}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Misplaced alignment tab character &.
-l.41 	L({\beta _{t + 1}}) - L({\beta _t}) &
-                                           \le \left\langle {{\beta _{t + 1}...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-! LaTeX Error: \begin{equation} on input line 39 ended by \end{aligned}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 	\end{aligned}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (303.71689pt too wide) detected at line 43
-\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 L\OT
-1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10  []   []jj[]   \OML/cmm/m/it/10 []\OMS/cms
-y/m/n/10 j[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 []\OT1/cmr/m
-/n/10 [](1 \OMS/cmsy/m/n/10   []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OT1/cmr/
-m/n/10 0
- []
-
-Missing character: There is no T in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -981,45 +858,66 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (35.92014pt too wide) in paragraph at lines 43--46
-      $\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )
- \OMS/cmsy/m/n/10 
+Overfull \hbox (23.76047pt too wide) in paragraph at lines 37--41
+        $\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10
+ )$
  []
 
 
-Overfull \hbox (37.09479pt too wide) in paragraph at lines 43--46
-\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/c
-msy/m/n/10 
- []
-
-
-Overfull \hbox (47.33093pt too wide) in paragraph at lines 43--46
-\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/c
-msy/m/n/10 
- []
-
-
-Overfull \hbox (18.88887pt too wide) in paragraph at lines 43--46
-\OML/cmm/m/it/10 ::: \OMS/cmsy/m/n/10 
- []
-
-
-Overfull \hbox (24.72575pt too wide) in paragraph at lines 43--46
+Overfull \hbox (33.88551pt too wide) in paragraph at lines 37--41
 \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (26.39104pt too wide) in paragraph at lines 43--46
-\OML/cmm/m/it/10 Diff[]$
- []
-
-
-Overfull \hbox (14.16663pt too wide) in paragraph at lines 43--46
+Overfull \hbox (14.16663pt too wide) in paragraph at lines 37--41
 \OML/cmm/m/it/10 t \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (29.45485pt too wide) in paragraph at lines 43--46
+Overfull \hbox (29.45485pt too wide) in paragraph at lines 37--41
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; :::; T$
+ []
+
+
+Overfull \hbox (35.92014pt too wide) in paragraph at lines 37--41
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/c
+msy/m/n/10 
+ []
+
+
+Overfull \hbox (37.09479pt too wide) in paragraph at lines 37--41
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/c
+msy/m/n/10 
+ []
+
+
+Overfull \hbox (47.33093pt too wide) in paragraph at lines 37--41
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/c
+msy/m/n/10 
+ []
+
+
+Overfull \hbox (18.88887pt too wide) in paragraph at lines 37--41
+\OML/cmm/m/it/10 ::: \OMS/cmsy/m/n/10 
+ []
+
+
+Overfull \hbox (24.72575pt too wide) in paragraph at lines 37--41
+\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (26.39104pt too wide) in paragraph at lines 37--41
+\OML/cmm/m/it/10 Diff[]$
+ []
+
+
+Overfull \hbox (14.16663pt too wide) in paragraph at lines 37--41
+\OML/cmm/m/it/10 t \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (29.45485pt too wide) in paragraph at lines 37--41
 \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; :::; T$
  []
 
@@ -1030,18 +928,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 	\begin{equation}
+l.42 	\begin{equation}
                        \label{eq:app:difsum}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 47--47
+Overfull \hbox (20.0pt too wide) in paragraph at lines 42--42
 [] 
  []
 
 
-Overfull \hbox (227.99611pt too wide) detected at line 49
+Overfull \hbox (227.99611pt too wide) detected at line 44
 [][] \OML/cmm/m/it/10 Diff[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 L\OT1/cmr/m/
 n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10
  TL\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 []\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \O
@@ -1070,14 +968,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 	\begin{aligned}
+l.47 	\begin{aligned}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Misplaced alignment tab character &.
-l.53 	&
+l.48 	&
        \sum_{t=1}^{T} Diff_t =
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1089,7 +987,7 @@ might try typing `S' now just to see what is salvageable.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.55 	&
+l.50 	&
        =-\frac{\lambda T}{2}{||{\beta _{T+1}-\beta^*}||^2} + \frac{G^2}{2 \l...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1099,20 +997,20 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-! LaTeX Error: \begin{equation} on input line 51 ended by \end{aligned}.
+! LaTeX Error: \begin{equation} on input line 46 ended by \end{aligned}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.56 	\end{aligned}
+l.51 	\end{aligned}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (565.86522pt too wide) detected at line 57
+Overfull \hbox (565.86522pt too wide) detected at line 52
 [] \OML/cmm/m/it/10 Diff[] \OT1/cmr/m/n/10 = [] [] []  = \OMS/cmsy/m/n/10  [][]
  \OT1/cmr/m/n/10 + [] [] [] \OMS/cmsy/m/n/10  [] [] []  []\OT1/cmr/m/n/10 (1 
 + [](\OML/cmm/m/it/10 T\OT1/cmr/m/n/10 ))
@@ -1128,7 +1026,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 ! Undefined control sequence.
-l.58 	Combining \eqref
+l.53 	Combining \eqref
                       {eq:app:difsum} and rearranging the result, we have:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1187,7 +1085,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 	\begin{equation*}
+l.54 	\begin{equation*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1198,7 +1096,7 @@ Missing character: There is no ( in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.60 	L(\beta
+l.55 	L(\beta
              _{T+1}) \leq L(\beta^*)+\frac{G^2(1+\ln (T))}{2\lambda T}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1210,7 +1108,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 	\end{equation*}
+l.56 	\end{equation*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1219,7 +1117,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.61 	\end{equation*}
+l.56 	\end{equation*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1237,7 +1135,7 @@ my insertion and my current dilemma will both disappear.
 Here is how much of TeX's memory you used:
  18 strings out of 493334
  223 string characters out of 3139229
- 60242 words of memory out of 3000000
+ 59242 words of memory out of 3000000
  3647 multiletter control sequences out of 15000+200000
  3948 words of font info for 15 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
