@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  30 OCT 2016 12:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.8)  3 NOV 2016 09:08
 entering extended mode
 **./pakdd.tex
 (pakdd.tex
@@ -417,19 +417,19 @@ LaTeX Font Info:    ... okay on input line 31.
 \everyMPtoPDFconversion=\toks40
 ) (gama_intro.tex [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<fig/mktl.png, id=11, 379.6584pt x 105.5142pt>
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
+(gama_works2.tex [2]) (statement2.tex
+<fig/mktl.png, id=16, 476.0184pt x 110.3322pt>
 File: fig/mktl.png Graphic file (type png)
  <use fig/mktl.png>
-Package pdftex.def Info: fig/mktl.png used on input line 15.
-(pdftex.def)             Requested size: 189.82874pt x 52.75697pt.
- [2 <./fig/mktl.png>]) (gama_works2.tex) (statement2.tex [3]
-<fig/ab.png, id=25, 571.4148pt x 273.6624pt>
+Package pdftex.def Info: fig/mktl.png used on input line 5.
+(pdftex.def)             Requested size: 190.40398pt x 44.13208pt.
+ [3 <./fig/mktl.png>] <fig/ab.png, id=25, 571.4148pt x 273.6624pt>
 File: fig/ab.png Graphic file (type png)
  <use fig/ab.png>
-Package pdftex.def Info: fig/ab.png used on input line 17.
+Package pdftex.def Info: fig/ab.png used on input line 20.
 (pdftex.def)             Requested size: 228.56186pt x 109.46301pt.
- [4 <./fig/ab.png>]) (BO.tex [5] [6] (agl1.tex)) (gama_exp.tex [7] (figs.tex
+ [4 <./fig/ab.png>]) (BO.tex [5] (agl1.tex [6])) (gama_exp.tex [7] (figs.tex
 <fig/caltechtoamazon.png, id=52, 578.16pt x 433.62pt>
 File: fig/caltechtoamazon.png Graphic file (type png)
 
@@ -540,11 +540,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3758 strings out of 493334
  49237 string characters out of 3139229
- 224264 words of memory out of 3000000
+ 226264 words of memory out of 3000000
  7156 multiletter control sequences out of 15000+200000
  11648 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,12n,24p,1221b,569s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,12n,24p,1050b,569s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -566,7 +566,7 @@ c/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on pakdd.pdf (12 pages, 999874 bytes).
+Output written on pakdd.pdf (12 pages, 1012884 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

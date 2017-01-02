@@ -33,8 +33,8 @@
 \title{Effective Multiclass Transfer For Hypothesis Transfer Learning}
 \maketitle
 \begin{abstract}
-	In this paper, we investigate the visual domain adaptation problem under the setting of \textit{Hypothesis Transfer Learning} (HTL) where we can only access the source model instead of the data. We aim at two important issues: effectiveness of the transfer on small target training set and compatibility of the transfer model for real-world HTL problems. To solve these two issues, we proposed our method, Effective Multiclass Transfer Learning (EMTLe).
-	We demonstrate that EMTLe, which uses the prediction of the source models as the transferable knowledge can exploit the knowledge of different types of source classifiers. We use the transfer parameter to weight the importance the prediction of each source model as the auxiliary bias and the output of the model trained from target model is adjusted with the auxiliary bias. Since the transfer parameter cannot be solved directly, we use the bi-level optimization to estimate the transfer parameter. Specifically, we show that our bi-level optimization problem is convex and we can effectively obtain the optimal transfer parameter with our novel objective function. Empirical results show that EMTLe can effectively exploit the knowledge and outperform other HTL baselines when the size of the target training set is small.  
+	In this paper, we investigate the visual domain adaptation problem under the setting of \textit{Hypothesis Transfer Learning} (HTL) where we can only access the source model instead of the data. However, previous studies of HTL are limited to either leveraging the knowledge from certain type of source classifier or low transfer efficiency on a small training set. In this paper, we aim at two important issues: effectiveness of the transfer on small target training set and compatibility of the transfer model for real-world HTL problems. To solve these two issues, we proposed our method, Effective Multiclass Transfer Learning (EMTLe).
+	We demonstrate that EMTLe, which uses the prediction of the source models as the transferable knowledge can exploit the knowledge of different types of source classifiers. We use the transfer parameter to weigh the importance the prediction of each source model as the auxiliary bias. Then we use the bi-level optimization to estimate the transfer parameter and demonstrate that we can effectively obtain the optimal transfer parameter with our novel objective function. Empirical results show that EMTLe can effectively exploit the knowledge and outperform other HTL baselines when the size of the target training set is small.  
 \end{abstract}
 
 %%
@@ -48,7 +48,6 @@
 \input{statement2.tex}
 
 \section{Bi-level Optimization for Transfer Parameter Estimation}\label{sec:smitle}
-
 \input{BO.tex}
 %\input{smitle.tex}
 

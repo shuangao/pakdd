@@ -17,8 +17,10 @@ Specifically, in our BO problem Eq. \eqref{eq:BO}, for the low-level optimizatio
 Then, we use mean square loss in the low-level objective function to optimize each target model $f_n$ with any given transfer parameter $\beta$:
 \begin{equation}\label{eq:bo_low}
 \begin{aligned}
-\text{Low-level:}\quad&f^{\backslash i}(\beta) : \underset{w,b}{\min} \sum_n^N\frac{1}{2}||w_n||^2+\frac{C}{2}\sum_j\left(Y_{jn}-f_n(x_j)-\beta_n f_n'(x_j)\right)^2\\
-&\text{s.t.} \qquad f_n(x) = w_nx+b_n; \quad x_j \in D^{\backslash i}
+\text{Low-level:}\quad&f^{\backslash i}(\beta) : \underset{w,b}{\min} \sum_n^N\frac{1}{2}||w_n||^2+\frac{C}{2}\sum_je^2_{jn}\\
+%\left(Y_{jn}-f_n(x_j)-\beta_n f_n'(x_j)\right)^2\\
+\text{s.t.} &\qquad f_n(x) = w_nx+b_n; \quad x_j \in D^{\backslash i}\\
+&\qquad e_{jn} = Y_{jn}-f_n(x_j)-\beta_n f_n'(x_j)
 \end{aligned}
 \end{equation}
 Here, $Y$ is an encoded matrix of $y$ using the one-hot strategy where $Y_{in} =1$ if $y_i=n$ and 0 otherwise.
@@ -36,15 +38,17 @@ Let $\psi^{-1}$ be the inverse of matrix $\psi$ and  $\psi_{ii}^{-1}$ is the $it
 \end{equation}
 where the matrix $\boldsymbol{\alpha}=\{\alpha_{in}|i=1,...l;n=1,...,N\}$ can be calculated as:
 \begin{equation}
-\boldsymbol{\alpha} =\psi^{-1} Y - \psi^{-1} f'(X)\boldsymbol{\beta}^T
+\boldsymbol{\alpha} =\psi^{-1} Y - \psi^{-1} f'(X)diag(\boldsymbol{\beta})
 \end{equation}
 
 \subsection{High-level optimization problem} 
 For the high level optimization problem, we use multi-class hinge loss \cite{crammer2002algorithmic} with $\ell_2$ penalty in our objective function.
 \begin{equation}\label{eq:bo_high}
 \begin{aligned}
-\text{High-level:}\quad&\beta: \min \frac{{{\lambda}}}{2}\sum\limits_{n}^N {{{\left\| {{\beta _n}} \right\|}^2}}  + \sum\limits_{i,n}\left[ {1 - {\varepsilon _{n{y_i}}} + {{\hat Y}_{in}} - {{\hat Y}_{i{y_i}}} - {\xi _i}} \right]\\
-&\text{s.t.} \qquad1 - {\varepsilon _{n{y_i}}} + {\hat Y_{in}} - {\hat Y_{i{y_i}}} \le {\xi_i}
+\text{High-level:}\quad&\beta: \min \frac{{{\lambda}}}{2}\sum\limits_{n}^N {{{\left\| {{\beta _n}} \right\|}^2}}  +
+\sum_i\xi_i\\
+ %\sum\limits_{i,n}\left[ {1 - {\varepsilon _{n{y_i}}} + {{\hat Y}_{in}} - {{\hat Y}_{i{y_i}}} - {\xi _i}} \right]\\
+\text{s.t.} \qquad& 1 - {\varepsilon _{n{y_i}}} + {\hat Y_{in}} - {\hat Y_{i{y_i}}} \le {\xi_i}
 \end{aligned}
 \end{equation}
 Here, $\varepsilon _{n{y_i}}=1$ if $n=y_i$ otherwise 0.

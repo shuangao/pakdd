@@ -1,14 +1,15 @@
 \begin{algorithm}\label{alg:1}
-       \caption{SMTLe}\label{alg:1}
+       \caption{EMTLe}\label{alg:1}
         \begin{algorithmic}[1]
             \REQUIRE $\lambda, \psi,Y,f',T$,
             \ENSURE $\beta=\left\{\beta^1,...,\beta^n\right\}$
             \STATE $\beta^0 = 1$
             ,$\alpha' = \psi^{-1}Y,\alpha'' = \psi^{-1}f'$
             \FOR {$t=1$ to $T$}
-                \STATE $\hat Y \leftarrow Y - {\left( {\psi^{-1} \circ I} \right)^{ - 1}}\left( \alpha' - \alpha''\beta \right)$,\qquad${\Delta _\beta }=0$ 
+                \STATE $\hat Y \leftarrow Y - {\left( {\psi^{-1} \circ I} \right)^{ - 1}}\left( \alpha' - \alpha''diag(\beta) \right)$
+                %\STATE ${\Delta _\beta }=0$ 
                 \FOR {$i=1$ to $l$}
-                	\STATE ${\Delta _\beta }\leftarrow {\Delta _\beta }+\lambda\beta$ 
+                	\STATE ${\Delta _\beta }=\lambda\beta$ 
                 	%\FOR {$r=1$ to $N$}
 	                    \STATE $l_{ir} = \max(1 - {\varepsilon _{{y_i}r}} + {\hat Y_{ir}} - {\hat Y_{i{y_i}}})$
 	                    \IF{$l_{ir}>0$}
